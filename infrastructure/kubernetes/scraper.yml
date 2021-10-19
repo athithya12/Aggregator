@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scraper-deployment
+spec:
+  selector:
+    matchLabels:
+      app: scraper
+  template:
+    metadata:
+      labels:
+        app: scraper
+    spec:
+      containers:
+        - name: scraper
+          image: avidyarth/aggregator/scraper
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scraper-service
+spec:
+  selector:
+    app: scraper
+  ports:
+    - port: 3000
+      targetPort: 3000

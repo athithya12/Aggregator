@@ -1,0 +1,26 @@
+apiVersion: skaffold/v2beta10
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infrastructure/kubernetes/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: avidyarth/aggregator/api
+      context: api
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.js"
+            dest: .
+    - image: avidyarth/aggregator/scraper
+      context: scraper
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.js"
+            dest: .
