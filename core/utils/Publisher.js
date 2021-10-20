@@ -18,8 +18,6 @@ class Publisher {
         await channel.assertQueue(queue, { durable: false });
 
         return new Publisher(connectionUri, queue, connection, channel);
-
-        break;
       } catch (err) {
         console.log(err);
         await new Promise((r) => setTimeout(r, 5000));

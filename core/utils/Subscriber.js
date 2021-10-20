@@ -25,8 +25,6 @@ class Subscriber {
           channel,
           callback
         );
-
-        break;
       } catch (err) {
         console.log(err);
         continue;
