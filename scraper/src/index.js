@@ -1,5 +1,4 @@
-const Publisher = require("./Publisher");
-const Subscriber = require("./Subscriber");
+const { Publisher, Subscriber } = require("@aggregatorio/core");
 
 let publisher = null;
 let subscriber = null;

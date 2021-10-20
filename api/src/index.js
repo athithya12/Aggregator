@@ -1,7 +1,5 @@
 const express = require("express");
-
-const Publisher = require("./Publisher");
-const Subscriber = require("./Subscriber");
+const { Publisher, Subscriber } = require("@aggregatorio/core");
 
 const app = express();
 

@@ -1,5 +1,5 @@
 {
-  "name": "@aggregator/api",
+  "name": "@aggregatorio/api",
   "version": "0.0.0",
   "main": "src/index.js",
   "author": "Athithya Vidyarth",
@@ -10,7 +10,7 @@
     "start:dev": "nodemon src/index.js"
   },
   "dependencies": {
-    "amqplib": "^0.8.0",
+    "@aggregatorio/core": "^0.0.1",
     "express": "^4.17.1",
     "redis": "^3.1.2"
   },

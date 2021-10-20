@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@aggregatorio/core@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@aggregatorio/core/-/core-0.0.0.tgz#79dc8ba4449a4406832830f51a771a729359b56d"
+  integrity sha512-+o7xkXyiVv0zRFhHYpKv27MVKrrdM1tjHvmo4wWQ+AYrSNsP2CIFoLz72xi6IG1Z+dq2NC+GkXj2c1P/ucXtog==
+  dependencies:
+    amqplib "^0.8.0"
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
@@ -761,9 +768,9 @@ negotiator@0.6.2:
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
 nodemon@^2.0.13:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-2.0.13.tgz#67d40d3a4d5bd840aa785c56587269cfcf5d24aa"
-  integrity sha512-UMXMpsZsv1UXUttCn6gv8eQPhn6DR4BW+txnL3IN5IHqrCwcrT/yWHfL35UsClGXknTH79r5xbu+6J1zNHuSyA==
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-2.0.14.tgz#287c7a2f6cd8a18b07e94cd776ecb6a82e4ba439"
+  integrity sha512-frcpDx+PviKEQRSYzwhckuO2zoHcBYLHI754RE9z5h1RGtrngerc04mLpQQCPWBkH/2ObrX7We9YiwVSYZpFJQ==
   dependencies:
     chokidar "^3.2.2"
     debug "^3.2.6"

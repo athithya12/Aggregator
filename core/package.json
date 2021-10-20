@@ -1,0 +1,11 @@
+{
+  "name": "@aggregatorio/core",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Athithya Vidyarth",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "amqplib": "^0.8.0"
+  }
+}
