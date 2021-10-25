@@ -1,10 +1,10 @@
 const { Publisher, Subscriber } = require("@aggregatorio/core");
-const startScraping = require("./startScraping");
+const getData = require("./getData");
 
 let publisher = null;
 let subscriber = null;
 
-const eventHandler = (_msg) => {
+const eventHandler = async (_msg) => {
   const msg = JSON.parse(_msg.content);
 
   console.log(msg);
@@ -13,13 +13,15 @@ const eventHandler = (_msg) => {
 
   switch (event) {
     case "SCRAPING_REQUEST":
-      startScraping(payload.url);
+      const publishPayload = await getData(payload.query);
+      publisher.publish({
+        event: "SCRAPING_SUCCESSFUL",
+        publishPayload,
+      });
       break;
     default:
       console.log("Invalid Event!");
   }
-
-  publisher.publish({ event: "SANITY_REPLY", payload: "Ipsum" });
 };
 
 const startApp = async () => {
