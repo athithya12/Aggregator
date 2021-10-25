@@ -29,7 +29,10 @@ const startApp = async () => {
 };
 
 app.get("/api/", (req, res) => {
-  publisher.publish({ event: "SANITY_CHECK", payload: "Lorem" });
+  publisher.publish({
+    event: "SCRAPING_REQUEST",
+    payload: { url: "https://www.amazon.in/s?k=jbl+headphones" },
+  });
 
   res.send({ message: "Message Sent" });
 });
